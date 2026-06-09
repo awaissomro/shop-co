@@ -12,7 +12,6 @@ import Home from './pages/Home'
 import ProductDetails from './pages/ProductDetails'
 import SignUp from './pages/SignUp'
 import SignIn from './pages/SignIn'
-// import Website from './components/Website/Website'
 
 function App() {
 
@@ -21,14 +20,12 @@ function App() {
 
   return (
     <>    
-    {/* {
-      isLoggedIn ? <Website onLogout={()=> setIsLoggedIn(false)} /> : <SignIn onLogIn={()=>setIsLoggedIn(true)} />
-    } */}
+    
     <BrowserRouter>
       <TopBanner/>
       <Navbar isLoggedIn={isLoggedIn} onLogout={()=>setIsLoggedIn(false)} /> 
       <Routes>
-        <Route path='/' element={isLoggedIn ? <Home/> :<Navigate to="/signIn" /> } />
+        <Route path='/' element={isLoggedIn ? <Home/> :<Navigate to="/signin" /> } />
         <Route path='/shop' element={<Shop/>} />
         <Route path='/onSale' element={<OnSale/>} />
         <Route path='/newArrivals' element={<NewArrivals/>}/>

@@ -48,7 +48,7 @@ const Navbar = ({isLoggedIn,onLogout}) => {
         isLoggedIn ? (
           <LogoutButton onClick={onLogout} >Logout</LogoutButton>
         ):(
-          <LogInButton to="/signIn">Login</LogInButton>
+          <LogInButton to="/signin">Login</LogInButton>
         )
       }
       <HamburgerButton onClick={() => setMenuOpen(!menuOpen)}>
