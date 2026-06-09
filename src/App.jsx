@@ -25,7 +25,7 @@ function App() {
       <TopBanner/>
       <Navbar isLoggedIn={isLoggedIn} onLogout={()=>setIsLoggedIn(false)} /> 
       <Routes>
-        <Route path='/' element={isLoggedIn ? <Home/> :<Navigate to="/signin" /> } />
+        <Route path='/' element={isLoggedIn ? <Home/> :<Navigate to="/signup" /> } />
         <Route path='/shop' element={<Shop/>} />
         <Route path='/onSale' element={<OnSale/>} />
         <Route path='/newArrivals' element={<NewArrivals/>}/>
