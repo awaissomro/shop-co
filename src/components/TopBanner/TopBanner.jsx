@@ -13,7 +13,7 @@ const TopBanner = () => {
         <span>Sign up and get 20% off to your first order.</span>
         <Link to="/signup">Sign Up Now</Link>
       </BannerText>
-      <div class="close-btn">
+      <div className="close-btn">
         <RxCross2 onClick={()=>setHideBanner(true)}/>
       </div>
     </Banner>

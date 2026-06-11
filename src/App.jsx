@@ -15,15 +15,23 @@ import SignIn from './pages/SignIn'
 
 function App() {
 
-  const[isLoggedIn, setIsLoggedIn] = useState(false)
-  
+  const[isLoggedIn, setIsLoggedIn] = useState(localStorage.getItem("isLoggedIn","true"))
+
+  const handleLogin = () =>{
+    localStorage.setItem("isLoggedIn","true")
+  }
+  const handleLogout = () =>{
+    localStorage.removeItem("isLoggedIn")
+    setIsLoggedIn(false)
+  }
+    
 
   return (
     <>    
     
     <BrowserRouter>
       <TopBanner/>
-      <Navbar isLoggedIn={isLoggedIn} onLogout={()=>setIsLoggedIn(false)} /> 
+      <Navbar isLoggedIn={isLoggedIn} onLogout={handleLogout} /> 
       <Routes>
         <Route path='/' element={isLoggedIn ? <Home/> :<Navigate to="/signup" /> } />
         <Route path='/shop' element={<Shop/>} />
@@ -32,7 +40,7 @@ function App() {
         <Route path='/brands' element={<Brands/>}/>
         <Route path='/product/:slug' element={<ProductDetails/>}/>
         <Route path='/signup' element={<SignUp/>} />
-        <Route path='/signin' element={<SignIn onLogIn={()=>setIsLoggedIn(true)} />}/>
+        <Route path='/signin' element={<SignIn onLogIn={handleLogin} />}/>
       </Routes>
     </BrowserRouter>
     </>

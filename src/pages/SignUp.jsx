@@ -52,7 +52,7 @@ const SignUp = () => {
       <Panel>
         <FormTitle>Create Account</FormTitle>
         <SubText>
-          Already have an account? <Link to="/signIn">Sign in</Link>
+          Already have an account? <Link to="/signin">Sign in</Link>
         </SubText>
 
         <OfferBanner>

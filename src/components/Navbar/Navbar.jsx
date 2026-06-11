@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { Container } from "../../styles/Container.js";
 import {
   NavBarContainer,
@@ -17,7 +17,6 @@ import { SlArrowDown } from "react-icons/sl";
 import { useState } from "react";
 import {newArrivals,topSelling} from "../../data/product.js"
 import { LogoutButton, LogInButton } from "../Navbar/NavBar.styles.js";
-
 
 
 const Nav_links = [
@@ -39,6 +38,12 @@ const Navbar = ({isLoggedIn,onLogout}) => {
     product.name.toLowerCase().includes(searchTerm.toLowerCase())
   )
 
+  const location = useLocation()
+  console.log(location.pathname)
+
+  
+  const hideAuthButtons = ["/signin","/signup"].includes(location.pathname.toLowerCase())
+
   return (
     <div style={{position:"relative"}}>
     
@@ -47,8 +52,8 @@ const Navbar = ({isLoggedIn,onLogout}) => {
     {
         isLoggedIn ? (
           <LogoutButton onClick={onLogout} >Logout</LogoutButton>
-        ):(
-          <LogInButton to="/signup">Login</LogInButton>
+        ): !hideAuthButtons  && (
+          <LogInButton to="/signin">Login</LogInButton>
         )
       }
       <HamburgerButton onClick={() => setMenuOpen(!menuOpen)}>
