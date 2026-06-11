@@ -15,10 +15,11 @@ import SignIn from './pages/SignIn'
 
 function App() {
 
-  const[isLoggedIn, setIsLoggedIn] = useState(localStorage.getItem("isLoggedIn","true"))
+  const[isLoggedIn, setIsLoggedIn] = useState(localStorage.getItem("isLoggedIn") === "true")
 
   const handleLogin = () =>{
     localStorage.setItem("isLoggedIn","true")
+    setIsLoggedIn(true)
   }
   const handleLogout = () =>{
     localStorage.removeItem("isLoggedIn")
