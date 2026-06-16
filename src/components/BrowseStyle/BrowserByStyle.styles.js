@@ -92,9 +92,9 @@ export const StyleCard = styled.div`
 
 export const CardLabel = styled.h3`
   position: absolute;
-  top: 20px;
-  left: 20px;
-  font-size: 22px;
+  top: 9px;
+  left: 17px;
+  font-size: 30px;
   font-weight: 700;
   color: #000;
   margin: 0;

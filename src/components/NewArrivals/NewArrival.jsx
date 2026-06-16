@@ -25,7 +25,7 @@ const NewArrival = () => {
       name: "T-shirt with Tape Details",
       rating: 4.5,
       price: 120,
-      orignalPrice: null,
+      originalPrice: null,
       discount: null,
     },
     {
@@ -35,7 +35,7 @@ const NewArrival = () => {
       name: "Skinny Fit Jeans",
       rating: 3.5,
       price: 240,
-      orignalPrice: 260,
+      originalPrice: 260,
       discount: "-20%",
     },
     {
@@ -45,7 +45,7 @@ const NewArrival = () => {
       name: "Checkered Shirt",
       rating: 4.5,
       price: 180,
-      orignalPrice: null,
+      originalPrice: null,
       discount: null,
     },
     {
@@ -55,7 +55,7 @@ const NewArrival = () => {
       name: "Sleeve Striped T-shirt",
       rating: 4.5,
       price: 130,
-      orignalPrice: 160,
+      originalPrice: 160,
       discount: "-30%",
     },
     {

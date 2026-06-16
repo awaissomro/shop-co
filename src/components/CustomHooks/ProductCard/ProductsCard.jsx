@@ -1,5 +1,5 @@
 import { Card, CardImage,CardName,CardPrice,CardRating } from "./ProductsCard.styles"
-import Rating from "../../../assets/stars.png"
+import Rating from "../../../assets/rating.png"
 const ProductsCard = ({image,name,rating,price,originalPrice,discount}) => {
 
 

@@ -1,0 +1,37 @@
+
+@font-face {
+    font-family:'Integral CF' ;
+    src: url('../assets/fonts/Fontspring-DEMO-integralcf-demibold.otf');
+    font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+    font-family:'Integral CF' ;
+    src: url('../assets/fonts/Fontspring-DEMO-integralcf-extrabold.otf');
+    font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+    font-family:'Integral CF' ;
+    src: url('../assets/fonts/Fontspring-DEMO-integralcf-heavy.otf');
+    font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+    font-family:'Integral CF' ;
+    src: url('../assets/fonts/Fontspring-DEMO-integralcf-medium.otf');
+    font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+    font-family:'Integral CF' ;
+    src: url('../assets/fonts/Fontspring-DEMO-integralcf-regular.otf');
+    font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+    font-family:'Integral CF' ;
+    src: url('../assets/fonts/Fontspring-DEMO-integralcf-bold.otf');
+    font-weight: 700;
+  font-style: normal;
+}

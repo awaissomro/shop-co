@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const NewsLetterBanner = styled.div`
+  /* background-color: #f2f0f1; */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -89,9 +90,16 @@ export const SubscribeButton = styled.button`
 // ── Footer ──────────────────────────────────────────
 
 export const FooterWrapper = styled.footer`
+  /* background: linear-gradient(to bottom, #ffffff 90px, #f2f0f1 90px);
+  position: relative;
+  width: 100%;
+  box-sizing: border-box; */
+  margin-top: 80px;
+  /* background-color: #f2f0f1; */
   padding: 60px 40px 0 40px;
   border-top: 1px solid #0000001a;
   margin-top: 60px;
+  background-color: #f2f0f1;
 `;
 
 export const FooterTop = styled.div`

@@ -14,7 +14,7 @@ import {
   StatDivider,
   HeroImageWrapper,
   StarLarge,
-  StarSmall,
+  StarSmall
 } from "../Hero/Hero.styles.js";
 import { useNavigate } from "react-router-dom";
 
@@ -23,8 +23,7 @@ const Hero = () => {
   const navigate = useNavigate()
   return (
     <HeroSection>
-      <StarLarge>✦</StarLarge>
-      <StarSmall>✦</StarSmall>
+      
       <Container>
         <HeroInner>
           <HeroText>
@@ -58,6 +57,8 @@ const Hero = () => {
           </HeroImageWrapper>
         </HeroInner>
       </Container>
+      <StarLarge>✦</StarLarge>
+      <StarSmall>✦</StarSmall>
     </HeroSection>
   );
 };

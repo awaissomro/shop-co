@@ -9,6 +9,7 @@ export const Logo = styled.h1`
     margin: 0;
     @media (max-width: 768px) {
     font-size: 24px; 
+    flex-shrink: 0;
   }
 `
 export const NavBarContainer = styled.nav`
@@ -21,25 +22,10 @@ export const NavBarContainer = styled.nav`
     padding-bottom: 20px;
     gap: 40px;
 
-      /* Link{
-        padding: 0.85rem;
-        background: #111;
-        border: none;
-        color: #fff;
-        font-size: 0.95rem;
-        border-radius: 62px;
-        font-family: "Satoshi", sans-serif;
-        font-weight: 600;
-        /* margin: 0.25rem; */
-        /* cursor: pointer; */
-        /* position: absolute; */
-        /* transition: opacity 0.15s, transform 0.15s; */
-        /* top: 20px; */
-      /* } */ 
    
   @media (max-width: 1024px) {
     padding: 20px 20px;
-    gap: 20px;
+    gap: 10px;
   }
 
   @media (max-width: 768px) {
@@ -59,6 +45,7 @@ export const LogoutButton = styled.button`
   font-family: "Satoshi", sans-serif;
   cursor: pointer;
   transition: opacity 0.15s;
+  flex-shrink: 0;
 
   &:hover {
     opacity: 0.8;
@@ -76,6 +63,7 @@ export const LogInButton = styled.button`
   cursor: pointer;
   text-decoration: none;
   transition: opacity 0.15s;
+  flex-shrink: 0;
 
   &:hover {
     opacity: 0.8;
@@ -90,6 +78,9 @@ export const NavLinksWrapper = styled.div`
     margin: 0;
     padding: 0;
     cursor: pointer;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    flex-shrink: 0;
   }
 
   li {
@@ -97,6 +88,7 @@ export const NavLinksWrapper = styled.div`
     align-items: center;
     position: relative;
     gap: 6px;
+    /* font-family: "Satoshi"; */
   }
 
   a {
@@ -154,9 +146,13 @@ export const SearchWrapper = styled.div`
   border-radius: 62px;
   padding: 12px 16px;
   flex-grow: 1; 
-  max-width: 600px; 
+  /* max-width: 600px;  */
   gap: 12px;
   position: relative;
+  flex: 1 1 250px;
+  min-width: 180px;
+  /* flex-shrink: 1 1 250px; */
+  max-width: 500px;
 
   svg {
     color: #000000;
@@ -188,17 +184,23 @@ export const IconsWrapper = styled.div`
   align-items: center;
   gap: 24px;
   cursor: pointer;
+  flex-shrink: 0;
 
   svg {
     width: 24px;
     height: 24px;
     cursor: pointer;
     transition: transform 0.2s;
-
     &:hover {
       transform: scale(1.05);
     }
   }
+  .desktop-only{
+    @media (max-width:900px) {
+      display: none;
+    }
+  }
+
   @media (max-width: 768px) {
     gap: 16px; 
   }
@@ -211,6 +213,11 @@ export const HamburgerButton = styled.div`
   svg {
     width: 24px;
     height: 24px;
+    transition: transform 0.25s ease;
+
+  }
+   &:hover svg {
+    transform: scale(1.1);
   }
 
   
@@ -234,16 +241,29 @@ export const MobileSearchIcon = styled.div`
 `;  
 export const MobileMenu = styled.div`
   display: none;
-  @media (max-width: 900px) {
-    display: ${({ $isOpen }) => ($isOpen ? "block" : "none")};
+   @media (max-width: 900px) {
+    /* display: ${({ $isOpen }) => ($isOpen ? "block" : "none")}; */
+    display: block;
     position: absolute;
-    top: 70px;
+    top: 100px;
     left: 0;
     width: 100%;
     background-color: #ffffff;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     z-index: 999;
     padding: 20px;
+    transition:
+    opacity 0.3s ease,
+    transform 0.3s ease,
+    visibility 0.3s ease;
+    backdrop-filter: blur(8px); 
+    opacity: ${({ $isOpen }) => ($isOpen ? 1 : 0)};
+    transform: ${({ $isOpen }) =>
+    $isOpen ? "translateY(0)" : "translateY(-15px)"};
+    visibility: ${({ $isOpen }) =>
+    $isOpen ? "visible" : "hidden"};
+    pointer-events: ${({ $isOpen }) => ($isOpen ? "auto" : "none")};
+  
 
     ul {
       display: flex;

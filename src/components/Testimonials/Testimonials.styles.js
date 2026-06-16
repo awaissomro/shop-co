@@ -15,8 +15,9 @@ export const Header = styled.div`
 `;
 
 export const Title = styled.h2`
+  font-family: "Integral CF", sans-serif;
   font-size: 48px;
-  font-weight: 900;
+  font-weight: 700;
   text-transform: uppercase;
   color: #000;
   margin: 0;
@@ -34,8 +35,9 @@ export const ArrowGroup = styled.div`
 export const ArrowButton = styled.button`
   width: 40px;
   height: 40px;
-  border-radius: 50%;
-  border: 1px solid #0000001a;
+  /* border-radius: 50%; */
+  /* border: none; */
+  /* border: 1px solid #0000001a; */
   background: transparent;
   font-size: 18px;
   cursor: pointer;
@@ -90,16 +92,13 @@ export const CustomerName = styled.div`
   gap: 6px;
 
   h4 {
-    font-size: 16px;
+    /* font-family: "Satoshi", sans-serif; */
+    font-size: 20px;
     font-weight: 700;
     color: #000;
     margin: 0;
   }
 
-  span {
-    color: green;
-    font-size: 16px;
-  }
 `;
 
 export const Review = styled.p`

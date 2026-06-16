@@ -7,14 +7,15 @@ export const Banner = styled.div`
   justify-content: center;
   align-items : center;
   position: relative;
-  padding:5px;
+  /* padding:5px; */
+  padding: 10px 48px;
 
   span {
     font-size: 14px;
     ${"" /* font-family:'Satoshi'; */}
   }
   a {
-    text-decoration: none;
+    text-decoration: underline;
     font-size: 16px;
   }
   &:hover a {
@@ -23,7 +24,9 @@ export const Banner = styled.div`
   }
    .close-btn{
     position: absolute;
-    right:67px;
+    right:16px;
+    top: 50%;
+    transform: translateY(-50%);
     cursor: pointer;
   }
 `;
@@ -34,7 +37,11 @@ export const BannerText = styled.div`
   justify-content :center;
   align-items:center;
   gap:8px;
+  flex-wrap: wrap;
+  text-align: center;
   
- 
+  Link{
+    /* text-decoration: underline; */
+  }
 `;
 
